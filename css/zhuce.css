@@ -1,0 +1,39 @@
+*{
+    font-size: 14px;
+    font-weight: bold;
+}
+.tr-bto{
+    width: 250px;
+    height: 50px;
+}
+.input{
+    width: 263px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 3px 10px 3px 10px;
+}
+.button{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background-color: #2aabd2;
+}
+.tips{
+    border:1px solid #ccc;
+    padding:0px 3px;color:#f00;
+    display:none;
+    height:20px;
+    line-height:20px;
+    background:#fcfcfc;
+}
+.input12{
+    width: 263px;
+}
+
+.body{
+    margin: 20px 0 0 40px;
+}
+

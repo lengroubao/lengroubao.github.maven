@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>其他操作</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+    <!--se2-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+    <link href="css/zhuce.css" rel="stylesheet">
+    <link href="css/qita.css" rel="stylesheet">
+    <script src="js/qita.js" type="text/javascript"></script>
+</head>
+<body>
+<div style="margin: 20px 20px 0 40px">
+<ul id="myTab" class="nav nav-tabs">
+    <li class="active"><a href="#home" data-toggle="tab">
+        删除</a>
+    </li>
+    <li><a href="#ios" data-toggle="tab">修改</a></li>
+    <li class="active"><a href="#zt" data-toggle="tab">
+        状态</a>
+    </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in active" id="home">
+        <p>请输入你要删除的账号：</p>
+        <form>
+        <input type="text" required="required" id="username2"  maxlength="12"
+               onblur="if(/[^0-9]/g.test(value))alert('提示:账号只能由数字组成')" class="input1"><br>
+        <button class="button1" id="buttonsc" >确定</button>
+        </form>
+    </div>
+    <!--修改-->
+    <div class="tab-pane fade" id="ios">
+        <form>
+            <p>请先输入你要修改的账号：（不填表示不修改）</p>
+        <table>
+            <tr class="tr-bto">
+                <td>
+                    <label>账号:</label>
+                </td>
+                <td >
+                    <input class="input" type="text" id="username" required="required" maxlength="12" onblur="if(/[^0-9]/g.test(value))alert('提示:账号只能由数字组成')" onmousemove="ontips(0)" onmouseout="outtips(0)">
+                </td>
+                <td><div name="tips" class="tips" id="tips">提示:账号只能由数字组成</div></td>
+            </tr>
+            <tr class="tr-bto">
+                <td>
+                    <label>名称:</label>
+                </td>
+                <td>
+                    <input class="input" type="text" id="name" maxlength="12" onmousemove="ontips(1)" onmouseout="outtips(1)" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')">
+                </td>
+                <td><div name="tips" class="tips" id="tips">提示:名称只能输入中文、英文、数字、@符号和.符号 且长度为12</div></td>
+            </tr>
+            <tr class="tr-bto">
+                <td>
+                    <label>密码:</label></td>
+                <td>
+                    <input class="input" type="password" id="password" maxlength="12" onmousemove="ontips(2)" onmouseout="outtips(2)" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')" >
+                </td>
+                <td><div name="tips" class="tips" id="tips">提示:密码只能输入中文、英文、数字、@符号和.符号且长度为12</div></td>
+            </tr>
+            <tr class="tr-bto"><td>
+                <label >备注:</label></td><td>
+                <textarea rows="5" cols="30" style="resize: none; " id="txt"onmousemove="ontips(3)" maxlength="300"onmouseout="outtips(3)"></textarea></td>
+                <td><div name="tips" class="tips" id="tips">提示:备注长度最多300个字符</div></td>
+            </tr>
+            <tr class="tr-bto">
+                <td>类型：</td>
+                <td><select id="select2"  style="width: 200px;" >
+                    <option></option>
+                    <optgroup label="会员">
+                        <option>初级会员</option>
+                        <option>中级会员</option>
+                        <option>高级会员</option>
+                    </optgroup>
+                    <optgroup label="管理员">
+                        <option>初级管理员</option>
+                        <option>中级管理员</option>
+                        <option>高级管理员</option>
+                    </optgroup>
+                </select></td>
+            </tr>
+            <tr> <td colspan="2">
+                <button class="button" onclick="btn()">提交</button>
+            </td>
+            </tr>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('#config-demo22').daterangepicker();
+                });
+                $('select').select2();
+            </script>
+        </table>
+        <P id="lab"></P>
+            </form>
+    </div>
+
+    <div class="tab-pane fade in active" id="zt">
+        <p>请输入你要封存/启封的账号：</p>
+        <form>
+            <input type="text" required="required" id="username3"  maxlength="12"
+                   onblur="if(/[^0-9]/g.test(value))alert('提示:账号只能由数字组成')" class="input1"><br>
+            <input type="radio" id="radio1" value="封存" name="radio" /><label>封存 </label>
+            <input  type="radio" id="radio2" value="启封" name="radio"/><label>启封 </label><br>
+            <button class="button1" id="button3" >确定</button>
+        </form>
+    </div>
+
+</div>
+<script>
+    $(function () {
+        $('#myTab li:eq(1) a').tab('show');
+    });
+</script>
+</div>
+</body>
+</html>

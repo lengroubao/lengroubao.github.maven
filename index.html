@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录页面</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/index.js"></script>
+    <!--<script>-->
+        <!--window.onload=function(){-->
+            <!--var onld =document.getElementById("onld");-->
+            <!--lod(70);-->
+            <!--var times=null;-->
+            <!--function lod(top){-->
+                <!--clearInterval(times);-->
+                <!--var onld =document.getElementById("onld");-->
+                <!--times=setInterval(function(){-->
+                    <!--var speen=(top-onld.offsetTop)/20;-->
+                    <!--speen=speen>0?Math.ceil(speen):Math.floor(speen);-->
+                    <!--if(onld.offsetTop==top)-->
+                    <!--{-->
+                        <!--clearInterval(times);-->
+                    <!--}else {-->
+                        <!--onld.style.top=onld.offsetTop+speen+'px';-->
+                    <!--}-->
+                <!--},50)-->
+
+                <!--document.getElementById("btnindex").onclick=function(){-->
+
+                    <!--var name= document.getElementById("inputEmail").value;-->
+                    <!--var pass= document.getElementById("inputPassword").value;-->
+                    <!--alert("3");-->
+                    <!--if(name=="admin"&&pass=="123"){-->
+
+                        <!--window.open("Frameset-1.html","_selft");-->
+                        <!--alert("4.5");-->
+                    <!--}else {alert("用户名或密码错误！！！")-->
+                        <!--alert("5");}-->
+                    <!--alert("6");-->
+                <!--}-->
+            <!--}}-->
+    <!--</script>-->
+</head>
+<body>
+<div id="bodyimg"></div>
+<div class="onld" id="onld">
+<div class="container">
+        <form class="form-box bodybox">
+            <h2 class="form-signin-heading">后台登陆</h2>
+            <label for="inputEmail" class="sr-only">name</label>
+            <input type="text" id="inputEmail" class="form-control" placeholder="name" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" id="btnindex">登录</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

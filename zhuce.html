@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>注册页面</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+    <!--se2-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+
+    <script src="js/yanzheng.js" type="text/javascript"></script>
+    <link href="css/zhuce.css" rel="stylesheet">
+</head>
+<body>
+<div class="body">
+<form>
+    <table>
+        <tr class="tr-bto">
+            <td>
+        <label>账号:</label>
+            </td>
+            <td >
+    <input type="text" class="input" required="required" id="username"  maxlength="12" onblur="if(/[^0-9]/g.test(value))alert('提示:账号只能由数字组成')" onmousemove="ontips(0)" onmouseout="outtips(0)">
+            </td>
+            <td><div name="tips" class="tips" id="tips">提示:账号只能由数字组成</div></td>
+        </tr>
+        <tr class="tr-bto">
+            <td>
+    <label>名称:</label>
+        </td>
+            <td>
+    <input type="text"class="input" required="required" id="name" maxlength="12" onmousemove="ontips(1)" onmouseout="outtips(1)" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')">
+            </td>
+            <td><div name="tips" class="tips" id="tips">提示:名称只能输入中文、英文、数字、@符号和.符号 且长度为12</div></td>
+    </tr>
+        <tr class="tr-bto">
+            <td>
+    <label>密码:</label></td>
+            <td>
+    <input type="password" class="input" required="required" id="password" maxlength="12" onmousemove="ontips(2)" onmouseout="outtips(2)" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g,'')" >
+            </td>
+            <td><div name="tips" class="tips" id="tips">提示:密码只能输入中文、英文、数字、@符号和.符号且长度为12</div></td>
+    </tr>
+        <tr class="tr-bto"><td>
+    <label >备注:</label></td><td>
+    <textarea rows="5" cols="30" style="resize: none; " class="input12" id="txt"onmousemove="ontips(3)" maxlength="300"onmouseout="outtips(3)"></textarea></td>
+            <td><div name="tips" class="tips" id="tips">提示:备注长度最多300个字符</div></td>
+    </tr>
+        <tr class="tr-bto">
+            <td>时间：</td>
+            <td> <input type="text" id="config-demo22" class="form-control input12"></td>
+        </tr>
+        <tr>
+
+
+            <tr class="tr-bto">
+        <td>类型：</td>
+        <td><select id="select2" required="required" class="input">
+            <option></option>
+            <optgroup label="会员">
+                <option>初级会员</option>
+                <option>中级会员</option>
+                <option>高级会员</option>
+            </optgroup>
+            <optgroup label="管理员">
+                <option>初级管理员</option>
+                <option>中级管理员</option>
+                <option>高级管理员</option>
+            </optgroup>
+        </select></td>
+    </tr>
+           <tr> <td colspan="2">
+    <button class="button" onclick="btn()">提交</button>
+</td>
+    </tr>
+    </table>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#config-demo22').daterangepicker();
+        });
+        $('select').select2();
+    </script>
+</form>
+<P id="lab"></P>
+</div>
+</body>
+</html>

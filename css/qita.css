@@ -1,0 +1,16 @@
+.button1{    width: 263px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background-color: #2aabd2;
+    margin-top: 20px;
+}
+.input1{
+    width: 263px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 3px 10px 3px 10px;
+}
+
